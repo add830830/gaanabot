@@ -1,1 +1,1 @@
-web: python GaanaBot.py
+worker: python GaanaBot.py
