@@ -8,5 +8,3 @@ requests
 
 demjson
 pynotify
-
-urllib.request
