@@ -9,4 +9,4 @@ requests
 demjson
 pynotify
 
-urllib
+urllib-3
