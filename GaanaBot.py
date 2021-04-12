@@ -1,6 +1,5 @@
 import telepot
 import urllib
-import urllib2
 from bs4 import BeautifulSoup
 import webbrowser
 import json
