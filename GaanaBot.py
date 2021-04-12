@@ -42,7 +42,7 @@ LYRICS_WAITING_MSG = 'Looking up lyrics for the song you requested. Please wait.
   
 def handle(msg):
   #Get chat_id and text from message which has been received
-  print 'Message received:', msg
+  print ('Message received:', msg)
   username = msg['from']['first_name']
   chat_id = msg['from']['id']
   command = msg['text']
@@ -60,7 +60,7 @@ def handle(msg):
      return
 
   first_word = command.split(' ', 1)[0]
-  print 'first word is : ' + first_word
+  print ('first word is : ' + first_word)
   lower_first_word = first_word.lower()
 
 
@@ -115,7 +115,7 @@ def sendlyrics(msg):
     data = json.load(urllib2.urlopen(LYRICS_URL))
 
     if data['lyric'] == '' :
-         print 'Lyrics not found.'
+         print ('Lyrics not found.')
          bot.sendMessage(chat_id, LYRICS_ERROR_MSG)
     else :
          lyrics = data['lyric']
