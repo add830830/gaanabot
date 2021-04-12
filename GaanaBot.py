@@ -94,23 +94,23 @@ def sendlyrics(msg):
 
     if song_name[-1] == ' ' :
          song_name = song_name[0:-1].strip()
-         print song_name
+         print (song_name)
 
     artist_name = s[p+1:]
     artist_name = artist_name.lower()
 
     if artist_name[-1] == ' ' :
          artist_name = artist_name[0:-1]
-         print artist_name
+         print (artist_name)
 
     artist_name = artist_name.replace(' ', '%20')
     song_name = song_name.replace(' ', '%20') 
 
-    print artist_name
-    print song_name
+    print (artist_name)
+    print (song_name)
 
     LYRICS_URL = BASE_LYRICS_URL + artist_name + SLASH + song_name
-    print LYRICS_URL
+    print (LYRICS_URL)
 
     data = json.load(urllib2.urlopen(LYRICS_URL))
 
@@ -119,7 +119,7 @@ def sendlyrics(msg):
          bot.sendMessage(chat_id, LYRICS_ERROR_MSG)
     else :
          lyrics = data['lyric']
-         print lyrics
+         print (lyrics)
          bot.sendMessage(chat_id, lyrics)
     return
 
